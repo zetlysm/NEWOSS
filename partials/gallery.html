@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="stylesheets/gallery.css">
+<link rel="stylesheet" href="stylesheets/frontpage.css"> 
+<section class="resources section-wrapper" id="resources">
+		<div infinite-scroll="paginateImages()" infinite-scroll-immediate-check="false">
+			<div ng-repeat="photo in scrollGallery track by $index"class="span-3" style="background-image:url('{{photo.url}}');padding:12%;background-size: cover;" ng-click="showPhoto($index)"></div>
+		</div>			
+</section>
+<div id="overlay" ng-show="currentPhoto"></div>
+<div id="photo-container" ng-show="currentPhoto" >
+	<img src="{{currentPhoto.url}}"/>
+		<span id="previous" ng-click="showPhoto(currentPhoto.index-1)"><img src="http://api.sdar.com/assets/left-arrow.png"/></span>
+		<span id="next" ng-click="showPhoto(currentPhoto.index+1)"><img src="http://api.sdar.com/assets/right-arrow.png"/></span>
+		<span id="close" ng-click="currentPhoto=null"><img src="http://api.sdar.com/assets/x-button.png"/></span>
+</div>
+<div class="return" ng-click="goBackGallery()"><img src="http://api.sdar.com/assets/back-arrow.png"/></div>
+				<!--<my-photo title="" type="3" color="violet" image="{{photo.url}}" index="{{$index}}" ng-click="showPhoto($index)"></my-photo>-->

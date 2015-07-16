@@ -1,0 +1,23 @@
+<section class="resources section-wrapper" id="resources">
+	<div infinite-scroll="paginateDocuments()" infinite-scroll-immediate-check="false">
+			<div ng-repeat="document in scrollDocuments track by $index" class="span-3 document" ng-click="showDocument(document)">
+				<p>{{document.title | removeNumber}}</p>			
+			</div>
+		</div>		
+</section>	
+<div class="return" ng-click="goBack()"><img src="http://api.sdar.com/assets/back-arrow.png"/></div> 
+<div>
+
+<div id="overlay" ng-show="currentPDF"></div>
+<div id="photo-container" ng-show="currentPDF" >
+	<iframe id="iframeprint" name="iframeprint" ng-src="{{currentPDF.url}}" width="100%" height="100%" style="border: 0;" scrolling="no"></iframe>	
+	<span id="close" ng-click="currentPDF=null">
+		<!--<button class="btn btn-primary" ng-click="printPDF(currentPDF.url)">Print</button>-->
+		<img src="http://api.sdar.com/assets/x-button.png"/>
+	</span>
+</div>
+
+
+
+
+

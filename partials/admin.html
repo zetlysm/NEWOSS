@@ -1,0 +1,43 @@
+<div class="forth">
+	<p>Photo Gallery</p>
+	<button dropzone="dropzoneConfig">
+	  Drag and drop files here or click to upload
+	</button>
+	<ul>
+		<li ng-repeat="photo in gallery"><span style="color:red" ng-click="removeFromGallery(photo)">Delete</span> {{photo}}</li>
+	</ul>
+</div>
+<div class="forth">
+	<p>News</p>
+	<textarea placeholder="Write new here" ng-model="newNew"></textarea>
+	<button ng-click="pushNew()">
+	  Submit
+	</button>
+	<ul>
+		<li ng-repeat="new in news">
+			<span ng-if="new.active==0" style="color:green" ng-click="toggleActivation(new.id)">Activate</span>
+			<span ng-if="new.active==1" style="color:orange" ng-click="toggleActivation(new.id)">Deactivate</span>
+			<span style="color:red" ng-click="removeFromNews(new.id)">Delete</span> {{new.content}}</li>
+	</ul>
+</div>
+<div class="forth">
+	<p>Documents</p>
+	<button dropzone="documentsDropzone">
+	  Drag and drop files here or click to upload
+	</button>
+	<ul>
+		<li ng-repeat="document in documents">
+			<span style="color:red" ng-click="removeFromDocuments(document)">Delete</span> {{document}}</li>
+	</ul>
+</div>
+<div class="forth">
+	<p>Realtor News</p>
+	<button dropzone="rnewsDropzone">
+	  Drag and drop files here or click to upload
+	</button>
+	<ul>
+		<li ng-repeat="rnews in RNews track by $index">
+			<span style="color:red" ng-click="removeFromRealtorNews(rnews)">Delete</span> {{rnews}}</li>
+	</ul>
+</div>
+<img class="loader" ng-show="loading" src="http://api.sdar.com/assets/loader.gif"/>

@@ -1,0 +1,25 @@
+<div class="full">
+<div class="left-container" style="width:{{marginImageJustKnockWidth}}"></div>
+	<div class="container">
+		<img src="http://api.sdar.com/assets/jk-logo-color.png" ng-click="openURL('http://www.justknock.com')"/>
+		<p class="title">Hello and Welcome!<p>
+		
+		<p>	We’re <strong>Just Knock</strong>, a state-of-the-art community-linking platform aimed at providing you a place to actively engage with your San Diego Association of Realtors REALTOR® in the buying and selling of your home.</p>
+		
+		<p>	If you’ve made it to this page, odds are that you were referred to us by your SDAR REALTOR®. But this website does more than just link you with your existing REALTOR® On our interface, you can get to know San Diego neighborhoods, find out what’s happening in each community, and even collect promos & deals in those respective areas!</p>
+		
+		<p>	Interacting with our website is simple and easy. If you’re already connected with an SDAR REALTOR®, just make an account here to connect with them directly. If you’re not connected with an SDAR REALTOR®, no worries— you can still make an account with us and gain access to nearly all of our features!</p>
+		
+		<p>	There is no better way to get to know a city than through the eyes of those who experience it on a daily basis. With our REALTORS® perched in nearly every corner of the county, we know this city through more than just high-ranking school districts and home selling prices. We live it. And therefore, it is our pleasure to serve you as a local, first-hand resource of all things San Diego.</p>
+		
+		<p>	We hope you enjoy all of the services Just Knock has to offer. We look forward to being your go-to for all things regarding the San Diego community!</p>
+		<p ng-click="openURL('http://www.justknock.com')" class="link">Visit JustKnock.com</p>
+	</div>
+<div class="right-container" style="width:{{marginImageJustKnockWidth}}"></div>
+</div>
+<div class="return" ng-click="goBack()"><img src="http://api.sdar.com/assets/back-arrow.png"/></div>
+
+<div id="photo-container" ng-show="CurrentURL" >
+	<iframe sandbox ="allow-scripts allow-same-origin allow-top-navigation allow-forms" ng-src="{{CurrentURL}}" width="100%" height="100%" style="border: 0;" scrolling="yes"></iframe>	
+	<span id="close" ng-click="CurrentURL=null"><img src="http://api.sdar.com/assets/x-button.png"/></span>
+</div>

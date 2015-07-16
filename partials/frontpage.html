@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="stylesheets/frontpage.css">
+<section class="resources section-wrapper" id="resources">
+    <the-weather title="Weather" type="3" color="rgb(230, 31, 41)" image=""></the-weather>
+    <my-square title="REALTOR+<sup>&reg;</sup>" type="3" color="rgb(143,196,203)" image="http://api.sdar.com/assets/jk-house-icon.png" ng-click="openURL('http://sdar.com/index.php?option=com_content&view=article&id=219&Itemid=296')"></my-square>
+    <my-square title="Just Knock" type="6" color="rgb(70,70,70)" image="http://api.sdar.com/assets/jk-logo.png" link="justknock" class="justknock"></my-square>
+    <get-social title="Get Social" type="3" color="rgb(35,103,178)"></get-social>
+    <photo-gallery title="Photo Gallery" type="6" link="gallery"></photo-gallery>
+    <my-square title="Events" type="3" color="rgb(146,39,143)" image="http://api.sdar.com/assets/jk-events-icon.png" link="events"></my-square>
+    <my-square title="Dashboard Login" type="6" color="rgb(230, 31, 41)" image="http://api.sdar.com/assets/jk-dashboard-icon.png" blank="http://sdar.com/index.php?option=com_realtor_dash&view=widgetss&Itemid=608&tmpl=component"></my-square>
+    <my-square title="Member Benefits" type="3" color="rgb(17,175,184)" image="http://api.sdar.com/assets/jk-benefits-icon.png" link="benefits"></my-square>
+    <my-square title="Videos" type="3" color="rgb(64,172,54)" image="http://api.sdar.com/assets/jk-videos-icon.png" link="videos"></my-square>
+    <my-square title="Membership Forms" type="3" color="rgb(17,175,184)" image="http://api.sdar.com/assets/jk-documents-icon.png" link="documents"></my-square>
+    <my-square title="Real Estate News" type="6" color="rgb(233,115,37)" image="http://api.sdar.com/assets/jk-documents-icon.png" link="news"></my-square>
+    <my-square title="Education" type="3" color="rgb(143,196,203)" image="http://api.sdar.com/assets/jk-documents-icon.png" blank="http://www.sdar.com/index.php?option=com_classesevents&view=classes&Itemid=640"></my-square>
+</section>
+<the-news></the-news>
+<div id="status">
+</div>
+<div id="photo-container" ng-show="CurrentURL" >
+    <iframe sandbox ="allow-scripts allow-same-origin allow-top-navigation allow-forms" ng-src="{{CurrentURL}}" width="100%" height="100%" style="border: 0;" scrolling="yes"></iframe> 
+    <span id="close" ng-click="CurrentURL=null"><img src="http://api.sdar.com/assets/x-button.png"/></span>
+</div>

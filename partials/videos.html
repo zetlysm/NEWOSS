@@ -1,0 +1,14 @@
+<section class="resources section-wrapper" id="resources">
+	<div class="span-3 video" ng-repeat="video in videos track by $index" style="background-image:url('{{video.thumbnail}}'); background-size:cover;" ng-click="playVideo(video.id);"> 
+		<p>{{video.title}}</p>
+	</div>
+</section>
+<div class="return" ng-click="goBack()"><img src="http://api.sdar.com/assets/back-arrow.png"/></div>
+
+<div id="overlay" ng-show="currentVideo"></div>
+<div id="photo-container" ng-show="currentVideo" >
+  <div ng-bind-html="currentVideo" style="height:100%;"></div>
+  <span id="close" ng-click="currentVideo=null">
+    <img src="http://api.sdar.com/assets/x-button.png"/>
+  </span>
+</div>

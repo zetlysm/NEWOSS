@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The OSS - EVE Online</title>
+
+        <meta name="description" content="" />
+        <meta name="author" content="Big Pi <bigpieve@gmail.com>" />
+        <link rel="shortcut icon" href="assets/img/favicon.png"/>
+
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="bower_components/FlipClock/compiled/flipclock.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+
+            <header>
+                <img src="assets/img/all-out.png"><h1>The OSS</h1>
+            </header>
+            <div class="clock"></div>
+            <div class="loss">
+                <strong>since last workplace accident</strong>
+                <br>
+                <a id="loss-link" target="_blank"></a>
+            </div>
+
+            
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="bower_components/FlipClock/compiled/flipclock.min.js"></script>
+        <script type="text/javascript">
+            var zkillRequest = $.ajax({
+                url: 'https://zkillboard.com/api/losses/corporationID/263585335/',
+                type: 'GET',
+                cache: true
+            });
+
+            zkillRequest.success(function(losses) {
+                var lastLossTime = new Date(losses[0].killTime).getTime();
+                var now = new Date();
+                var localNow = now.getTime();
+                var localOffset = now.getTimezoneOffset() * 60000;
+                var utcNow = localNow + localOffset;
+
+                var diff = utcNow/1000 - lastLossTime/1000;
+
+                $('.clock').FlipClock(diff, {
+                    clockFace: 'DailyCounter'
+                });
+
+                var linkText = losses[0].victim.characterName + ' (' + numberWithCommas(losses[0].zkb.totalValue) + ' ISK)';
+                var linkUrl = 'https://zkillboard.com/kill/' + losses[0].killID + '/';
+
+                $('#loss-link').text(linkText).attr('href', linkUrl);
+            });
+
+            var numberWithCommas = function(x) {
+                return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
+
+        </script>
+
+    </body>
+</html>

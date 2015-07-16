@@ -1,0 +1,198 @@
+<section class="resources section-wrapper half" id="resources">
+    <my-square 
+	    title="BuyerMLS" 
+			type="2" 
+			image="http://api.sdar.com/assets/jk-benefits-icon.png" 
+			ng-click="openURL('http://www.buyermls.com')"
+    	class="event benefit">
+    </my-square>
+
+    <my-square 
+    	title="School Scout" 
+			type="2" 
+			image="http://api.sdar.com/assets/jk-benefits-icon.png" 
+			ng-click="openURL('http://www.schoolscout.com')"
+    	class="event benefit">
+    </my-square>
+
+    <my-square 
+    	title="Showing Suite" 
+    	type="2" 
+    	image="http://api.sdar.com/assets/jk-benefits-icon.png" 
+			ng-click="openURL('http://www.showingsuite.com')"
+    	class="event benefit">
+    </my-square>
+
+    <my-square 
+    	title="Realty APX" 
+    	type="3" 
+    	image="http://api.sdar.com/assets/jk-benefits-icon.png" 
+			ng-click="openURL('http://www.realtyapx.com')"
+    	class="event benefit">
+    </my-square>
+
+    <my-square 
+    	title="Property Panorama" 
+    	type="3" 
+    	image="http://api.sdar.com/assets/jk-benefits-icon.png" 
+			ng-click="openURL('http://www.propertypanorama.com')"
+    	class="event benefit">
+    </my-square>
+
+    <my-square 
+    	title="Single Property Sites" 
+    	type="3" 
+    	image="http://api.sdar.com/assets/jk-benefits-icon.png" 
+			ng-click="openURL('http://www.listinginfopages.com')"
+    	class="event benefit">
+    </my-square>
+
+    <my-square 
+    	title="Dizzle" 
+    	type="2" 
+    	image="http://api.sdar.com/assets/jk-benefits-icon.png" 
+			ng-click="openURL('http://www.dizzle.com')"
+    	class="event benefit">
+    </my-square>
+
+    <my-square 
+    	title="Fast Stats" 
+    	type="2" 
+    	image="http://api.sdar.com/assets/jk-benefits-icon.png" 
+			ng-click="openContent('faststats')"
+    	class="event benefit">
+    </my-square>
+
+    <my-square 
+    	title="Google Apps" 
+    	type="2" 
+    	image="http://api.sdar.com/assets/jk-benefits-icon.png" 
+			ng-click="openContent('google')"
+    	class="event benefit">
+    </my-square>
+
+    <my-square 
+    	title="Member Advisory Program (MAP)" 
+    	type="3" 
+    	image="http://api.sdar.com/assets/jk-benefits-icon.png" 
+			ng-click="openContent('memberadvisory')"
+    	class="event benefit">
+    </my-square>
+    
+    <my-square 
+    	title="REALTORS® Property Resource" 
+    	type="3" 
+    	image="http://api.sdar.com/assets/jk-benefits-icon.png" 
+			ng-click="openContent('realtors')"
+    	class="event benefit">
+    </my-square>
+
+    <my-square 
+    	title="PC/Mac Repair" 
+    	type="3" 
+    	image="http://api.sdar.com/assets/jk-benefits-icon.png" 
+			ng-click="openContent('pcmacrepair')"
+    	class="event benefit">
+    </my-square>
+    
+    <my-square 
+    	title="DocuSign" 
+    	type="2" 
+    	image="http://api.sdar.com/assets/jk-benefits-icon.png" 
+			ng-click="openContent('docudesign')"
+    	class="event benefit">
+    </my-square>
+
+    <my-square 
+    	title="GEICO" 
+    	type="2" 
+    	image="http://api.sdar.com/assets/jk-benefits-icon.png" 
+			ng-click="openContent('geico')"
+    	class="event benefit">
+    </my-square>
+
+    <my-square 
+    	title="Real Estate Mediation Center" 
+    	type="2" 
+    	image="http://api.sdar.com/assets/jk-benefits-icon.png" 
+			ng-click="openContent('meditationcenter')"
+    	class="event benefit">
+    </my-square>
+</section>
+<div class="return" ng-click="goBack()"><img src="http://api.sdar.com/assets/back-arrow.png"/></div>
+<div id="status">
+</div>
+<div id="photo-container" ng-show="CurrentURL" >
+	<iframe sandbox ="allow-scripts allow-same-origin allow-top-navigation allow-forms" ng-src="{{CurrentURL}}" width="100%" height="100%" style="border: 0;" scrolling="yes"></iframe>	
+	<span id="close" ng-click="CurrentURL=null"><img src="http://api.sdar.com/assets/x-button.png"/></span>
+</div>
+<div id="preview-content" ng-show="currentContent">
+	<!-- FAST STATS PREVIEW -->
+	<div ng-show="currentContent=='faststats'">
+    	<img src="http://api.sdar.com/assets/logo_fast.png" />
+		<ul>
+			<li>Local Housing Market Updates</li>
+			<li>Monthly Housing Statistics</li>
+			<li>Housing Supply</li>
+			<li>Foreclosure reports</li>
+		</ul>
+		<button ng-click="openURL('http://www.sdar.com/index.php?option=com_content&view=article&id=343&Itemid=705')">Learn more</button>
+	</div>
+	<!-- GOOGLE APPS PREVIEW -->
+	<div ng-show="currentContent=='google'">
+ 		<img src="http://api.sdar.com/assets/Google-Apps-logo.jpg" />
+		<p>SDAR has 'Gone Google' to bring the best possible tools to its members. To make your business the best it can be, enroll in Google Apps full suite of business tools; a complimentary benefit to REALTOR®Plus members.</p>
+		<ul>
+			<li>Advanced Technology</li>
+			<li>Cost & Time Savings</li>
+			<li>Enhanced Email Services</li>
+			<li>Customizable & Collaborative Calendars</li>
+			<li>Collaborative Documents</li>
+			<li>State-of-the-Art Security</li>
+			<li>Robust & Expandable Storage</li>
+			<li>Click here to learn more.</li>
+		</ul>
+		<button ng-click="openURL('http://www.sdar.com/index.php?option=com_content&view=article&id=195&Itemid=478')">Learn more</button>
+	</div>
+	<!-- MEMBER ADVISORY PROGRAM PREVIEW -->
+	<div ng-show="currentContent=='memberadvisory'">
+ 		<img src="http://api.sdar.com/assets/logo_map.jpg" />
+		<p>The Member Advisory Program (MAP) is SDAR's initiative to provide members a direct line of communication. By completing periodic surveys and beta programs, you'll help the association fine-tune and provide a roadmap for future services and products. You'll also receive incentives for your participation when you complete the surveys within certain time limits. To learn more and to enroll in MAP, click here.</p>		
+		<button ng-click="openURL('http://www.sdar.com/images/pdfs/SDAR-MongoFAXCoverSheet.pdf')">Learn more</button>
+	</div>	
+	<!-- REALTORS PROPERTY RESOURCE PROGRAM PREVIEW -->
+	<div ng-show="currentContent=='realtors'">
+ 		<img src="http://api.sdar.com/assets/logo_RPR.jpg" />
+		<p>REALTORS® Property Resource (RPR) is an online real estate library exclusive to REALTOR® members offering valuable data on every property in the United States.</p>
+		<p>The database is built from public records & assessment and provides comprehensive buyer & seller reports in seconds. Set-up your account today.</p>		
+		<iframe width="420" height="236" src="http://www.youtube.com/embed/OFIKofSpTL8" frameborder="0" allowfullscreen=""></iframe><br>
+		<button ng-click="openURL('https://www.narrpr.com/')">Learn more</button>
+	</div>
+	<!-- PC/MAC REPAIR PREVIEW -->
+	<div ng-show="currentContent=='pcmacrepair'">
+ 		<img src="http://api.sdar.com/assets/pc_repair.png" />
+		<p>SDAR Members receive 2 free PC or Mac repairs per year, and 3 "quick-fix" support calls per year. (REALTOR®Plus members receive 6 free PC or Mac repairs per year.) Restrictions apply. For more information and to view customer responsibilities, click here. </p>
+		<p>Issues may include Microsoft Windows and Office security patches and stability updates; scanning and removal of viruses, adware, or spyware; and program updates for anti-virus, anti-spyware, and anti-adware solutions.</p>		
+	</div>
+	<!-- PC/MAC REPAIR PREVIEW -->
+	<div ng-show="currentContent=='docudesign'">
+ 		<img src="http://api.sdar.com/assets/DocuSign2small.png" />
+		<p>Electronic signature & e-signature services that enable businesses to electronically send, sign, & manage documents with confidence. Click here for more information.</p>
+	</div>
+	<!-- GEICO PREVIEW -->
+	<div ng-show="currentContent=='geico'">
+ 		<img src="http://api.sdar.com/assets/logo_geico_tools.jpg" />
+		<p>SDAR and GEICO are working together to bring exclusive savings to SDAR members. Contact GEICO for a free quote on auto insurance to see how much you could be saving. Don’t forget to mention your SDAR affiliation; you could qualify for an exclusive member savings opportunity. Visit <span ng-click="openURL('https://www.narrpr.com/')">www.geico.com/disc/sdar</span> or call 1-800-368-2734 for your free rate quote.</p>
+		<button ng-click="openURL('https://www.geico.com/landingpage/go51.htm?logo=70444')">Learn more</button>
+	</div>
+	<!-- REAL STATE MEDITATION CENTER PREVIEW -->
+	<div ng-show="currentContent=='meditationcenter'">
+ 		<img src="http://api.sdar.com/assets/logo_remc.png" />
+		<p>Save 25% off of hourly mediation fees at the Real Estate Mediation Center.</p>
+		<p>Conveniently located in the heart of Kearny Mesa, our center offers a confidential, cost-effective, and convenient method for resolving real estate disputes. All of our mediators are experts in the real estate field, including attorneys and brokers. </p>
+		<p>We will guide you and your clients through the mediation process from start to finish. You first step to a solution is to contact us today. </p>
+		<button ng-click="openURL('http://realestatemediationcenter.com/')">Learn more</button>
+	</div>
+
+	<span id="close" ng-click="currentContent=null"><img src="http://api.sdar.com/assets/x-button.png"/></span>
+</div>
